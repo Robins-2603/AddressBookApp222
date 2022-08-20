@@ -46,3 +46,12 @@ const remove = (node) => {
     document.querySelector('.per-count').textContent = addrBookList.length;
     createInnerHtml();
 }
+
+// for update functionality
+const update = (node) => {
+    let addrAddressData = addrBookList.find(addrData => addrData._id == node.id)
+    if(!addrAddressData) return;
+    localStorage.setItem('editAddr', JSON.stringify(addrAddressData))
+    window.location.replace(site_properties.add_addressBook_page);
+    
+}
