@@ -60,6 +60,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
   }
   
+//  reset form
     const resetForm = () => {
     setValue('#name', '');
     setValue('#phone', '');
